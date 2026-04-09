@@ -22,33 +22,7 @@ from pathlib import Path
 
 def get_doc_names(path: Path):
     return [f for f in path.rglob("*.pdf") if f.is_file()]
-
-# def get_doc_names(path):
-#     print("Path:", path)
-#     print("Exists:", path.exists())
-
-#     file_names = []         
-    
-#     for file in path.rglob("*"):
-#         print("Found:", file)
-
-#         if file.is_file():
-#             print("File:", file.name, "Suffix:", file.suffix)
-
-#             if file.suffix.lower() == ".pdf":
-#                 print("PDF FOUND:", file)
-#                 file_names.append(file)
-
-#     print("FINAL LIST:", file_names)
-#     return file_names
-
-# def get_doc_names(path):
-#     file_names = []         
-#     for file in path.rglob("*"):    
-#         if file.is_file():        
-#             if file.suffix.lower() == ".pdf":   
-#                 file_names.append(file)        
-#     return file_names          
+   
 
 
 def load_docs(file):
