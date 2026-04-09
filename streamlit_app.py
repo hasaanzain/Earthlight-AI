@@ -8,9 +8,9 @@ st.set_page_config(page_title="Earthlight AI")
 st.title("Earthlight AI")
 
 path = Path("earthlight_research_vault")
-st.write("Current working directory:", Path.cwd())
-st.write("Target path:", path.resolve())
-st.write("Path exists:", path.exists())
+# st.write("Current working directory:", Path.cwd())
+# st.write("Target path:", path.resolve())
+# st.write("Path exists:", path.exists())
 
 @st.cache_resource
 def load_vectordb():
