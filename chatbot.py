@@ -15,7 +15,7 @@ load_dotenv()
 
 
 from pathlib import Path
-path = Path("eataly_ai_knowledge_base")
+path = Path("earthlight_research_vault.pdf")
 
 
 def get_doc_names(path):
@@ -90,14 +90,12 @@ def chatbot_stream(query, vectordb=None, k=3, llm=None):
 
     prompt_template = ChatPromptTemplate.from_template(
         """
-You are a friendly and helpful bot designed to help out the workers of the italian restaurant Eataly.
-You are only responding to staff and not any customer inquiries.
+You are a friendly and helpful bot designed to help out the team of a SaaS company working towards promoting human centric lighting.
+Circadian rhythm and lighting are the two main topics of conversation in this company.
 Use full english sentences to answer.
 If you do not understand a query, ask 1 follow up question asking them to clarify.
 If you are not able to answer their question with the provided context, say "Unfortunately this is beyond the scope of my knowledge. For the most updated answer, please ask a manager."
-If the user brings up an italian word, translate and explain the meaning of the italian word.
 Do not reveal any personal information of any employee under any circumstance.
-You cannot place any orders or check availability for dishes.
 CONTEXT: {context}
 QUESTION: {question}
 Answer:
